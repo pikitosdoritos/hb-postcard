@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    display: flex;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+h1 {
+    margin: auto;
+    text-align: center;
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 145px;
+    letter-spacing: 29px;
+    transform: translate();
+}
+
+.fade {
+    opacity: 0%;
+    transform: translateY(300px);
+}
+
+span {
+    transition: 3s;
+    display: inline-block;
+}
