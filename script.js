@@ -15,6 +15,7 @@ const colors = [
     'orange'
 ];
 wrapLetters();
+animateBalloons();
 
 function wrapLetters() {
     const h1 = document.querySelector('h1');
@@ -33,6 +34,15 @@ function wrapLetters() {
 
         setTimeout(() => span.classList.remove('fade'), delay);
     }
+}
+
+function animateBalloons() {
+    const items = document.querySelectorAll('svg');
+
+    items.forEach(svg => {
+        svg.style.left = Math.random()*100 + '%';
+        svg.style.top = Math.random()*100 + '%';
+    })
 }
 
 function wrapInSpan(char) {

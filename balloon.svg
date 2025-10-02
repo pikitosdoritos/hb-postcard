@@ -1,0 +1,79 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Gloss & shade -->
+    <radialGradient id="gloss" cx="30%" cy="25%" r="50%">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#fff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="shade" cx="50%" cy="70%" r="70%">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)" />
+      <stop offset="100%" stop-color="rgba(0,0,0,0.25)" />
+    </radialGradient>
+
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+
+    <style>
+      .string { fill:none; stroke:#444; stroke-width:2; stroke-linecap:round; }
+      .knot { fill:#444; }
+    </style>
+
+    <!-- Sprite symbols -->
+    <symbol id="balloon-red" viewBox="-100 -120 200 250">
+      <ellipse cx="0" cy="0" rx="75" ry="100" fill="#ff4d4f"/>
+      <ellipse cx="0" cy="0" rx="75" ry="100" fill="url(#shade)"/>
+      <ellipse cx="-25" cy="-30" rx="40" ry="30" fill="url(#gloss)"/>
+      <polygon points="-8,95 8,95 0,108" class="knot"/>
+      <path class="string" d="M 0 108 C -20 150, 25 190, -15 240 S 20 320, -10 380"/>
+    </symbol>
+
+    <symbol id="balloon-blue" viewBox="-100 -120 200 250">
+      <ellipse cx="0" cy="0" rx="80" ry="105" fill="#4da3ff"/>
+      <ellipse cx="0" cy="0" rx="80" ry="105" fill="url(#shade)"/>
+      <ellipse cx="-28" cy="-32" rx="42" ry="32" fill="url(#gloss)"/>
+      <polygon points="-8,100 8,100 0,115" class="knot"/>
+      <path class="string" d="M 0 115 C 30 160, -30 200, 20 250 S -10 320, 10 380"/>
+    </symbol>
+
+    <symbol id="balloon-yellow" viewBox="-100 -120 200 250">
+      <ellipse cx="0" cy="0" rx="70" ry="95" fill="#ffd43b"/>
+      <ellipse cx="0" cy="0" rx="70" ry="95" fill="url(#shade)"/>
+      <ellipse cx="-20" cy="-28" rx="35" ry="26" fill="url(#gloss)"/>
+      <polygon points="-8,90 8,90 0,105" class="knot"/>
+      <path class="string" d="M 0 105 C -10 150, 20 180, -5 220 S 15 300, -10 360"/>
+    </symbol>
+
+    <symbol id="balloon-green" viewBox="-100 -120 200 250">
+      <ellipse cx="0" cy="0" rx="80" ry="105" fill="#51cf66"/>
+      <ellipse cx="0" cy="0" rx="80" ry="105" fill="url(#shade)"/>
+      <ellipse cx="-25" cy="-30" rx="38" ry="28" fill="url(#gloss)"/>
+      <polygon points="-8,100 8,100 0,115" class="knot"/>
+      <path class="string" d="M 0 115 C -35 160, 20 200, -15 250 S 15 310, -10 380"/>
+    </symbol>
+
+    <symbol id="balloon-purple" viewBox="-110 -130 220 260">
+      <ellipse cx="0" cy="0" rx="90" ry="115" fill="#b197fc"/>
+      <ellipse cx="0" cy="0" rx="90" ry="115" fill="url(#shade)"/>
+      <ellipse cx="-30" cy="-36" rx="44" ry="34" fill="url(#gloss)"/>
+      <polygon points="-9,108 9,108 0,124" class="knot"/>
+      <path class="string" d="M 0 124 C 25 170, -25 210, 15 260 S -10 330, 5 390"/>
+    </symbol>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="linear-gradient(#f9fbff,#e9f1ff)" />
+
+  <!-- Use sprites -->
+  <g filter="url(#shadow)">
+    <use href="#balloon-red" x="200" y="180"/>
+    <use href="#balloon-blue" x="360" y="140"/>
+    <use href="#balloon-yellow" x="500" y="200"/>
+    <use href="#balloon-green" x="640" y="160"/>
+    <use href="#balloon-purple" x="380" y="250"/>
+  </g>
+
+</svg>
