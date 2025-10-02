@@ -1,3 +1,19 @@
+const colors = [
+    'cyan',
+    'red',
+    'yellow',
+    'lime',
+    'orange',
+    ,
+    'red',
+    'yellow',
+    'lime',
+    'orange',
+    'cyan',
+    'red',
+    'purple',
+    'orange'
+];
 wrapLetters();
 
 function wrapLetters() {
@@ -11,7 +27,9 @@ function wrapLetters() {
 
     for (let i = 0; i < spans.length; i++) {
         const span = spans[i];
-        const delay = i * 300;
+        const delay = i * 400 + 700;
+
+        span.style.color = colors[i];
 
         setTimeout(() => span.classList.remove('fade'), delay);
     }

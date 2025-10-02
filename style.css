@@ -24,4 +24,5 @@ h1 {
 span {
     transition: 3s;
     display: inline-block;
+    text-shadow: 4px 2px 6px grey;
 }
