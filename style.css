@@ -3,6 +3,7 @@ body {
     display: flex;
     height: 100dvh;
     overflow: hidden;
+    --transition: 3s;
 }
 
 h1 {
@@ -22,7 +23,7 @@ h1 {
 }
 
 span {
-    transition: transform 0.2s ease, opacity 3s, color 3s;
+    transition: transform var(--transition), ease, opacity 3s, color 3s;
     display: inline-block;
     text-shadow: 4px 2px 6px grey;
     will-change: transform;

@@ -50,7 +50,7 @@ function setupLetterRepulsion(spans) {
 
     const influenceRadius = 200;
     const maxPush = 140;
-    const ease = 0.2;
+    const ease = 0.3;
 
     let pointerX = null;
     let pointerY = null;
@@ -136,6 +136,10 @@ function setupLetterRepulsion(spans) {
         pointerY = null;
         scheduleUpdate();
     });
+
+    // setTimeout(() => {
+    //     document.body.style.setProperty('--transition', '3s')
+    // }, 10000);
 }
 
 function wrapInSpan(char) {
